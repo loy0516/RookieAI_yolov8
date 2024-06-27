@@ -1319,7 +1319,7 @@ def main_program_loop(model):  # 主程序流程代码
 
         # 检测和跟踪对象（推理部分）
         results = model.predict(frame, save=False, conf=confidence, half=True, agnostic_nms=True, iou=0.7,
-                                classes=[target_selection], device="cuda:0")
+                                classes=[target_selection], device="cuda:0", verbose=False)
         # ---------------------------------------------------------------------------
         # 绘制结果
         frame_ = results[0].plot()
